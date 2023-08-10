@@ -1,0 +1,39 @@
+.Legend{
+    height:413px;
+    width: 1044px;
+}
+.LegendContainer{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.WorldImage{
+    height: 542px;
+    width: 1012px;
+}
+.parform{
+text-align: center;
+align-items: center;
+justify-content: center;
+margin-left: 400px;
+}
+.form{
+    background-color: white;
+    width: 405px;
+    margin-left: 400px;
+    border-radius: 10%;
+    height: 551px;
+    justify-content: space-around;
+}
+
+.Continue{
+height: 60px;
+width: 282px;
+margin-bottom: 4px;
+}
+.Contact{
+    height: 60px;
+    width: 282px;
+}
+.btn{
+    justify-content: space-between;
+}
