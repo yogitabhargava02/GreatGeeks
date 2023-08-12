@@ -164,17 +164,17 @@ High quality work
           FAQ
         </h5>
         </div>
-        <ul style={{ listStyleType: 'none', marginBottom:"-20%"}}>
+        <ul style={{ listStyleType: 'none'}}>
   <li><h6>What is Copyrights Document Add on (gig extra)?</h6>
-  <hr className="faqline"/>
+
             </li>
-  <li><h6>What is Social Media Kit?</h6> <hr className="faqline"/></li>
-  <li><h6>How long does it take for a revision?</h6> <hr className="faqline"/></li>
-  <li><h6>Do you design and develop websites?</h6> <hr className="faqline"/></li>
-  <li><h6>I see a lot of orders in queue. Will this affect my order delivery time?</h6> <hr className="faqline"/></li>
-  <li><h6>What is vector and source file?</h6> <hr className="faqline"/></li>
-  <li><h6>What is a revision?</h6> <hr className="faqline"/></li>
-  <li><h6>How is the premium package beneficial?</h6> <hr className="faqline"/></li>
+  <li><h6>What is Social Media Kit?</h6> </li>
+  <li><h6>How long does it take for a revision?</h6> </li>
+  <li><h6>Do you design and develop websites?</h6> </li>
+  <li><h6>I see a lot of orders in queue. Will this affect my order delivery time?</h6></li>
+  <li><h6>What is vector and source file?</h6> </li>
+  <li><h6>What is a revision?</h6> </li>
+  <li><h6>How is the premium package beneficial?</h6></li>
 </ul>
 
       </div>

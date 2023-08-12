@@ -39,13 +39,14 @@ h2 {
 }
 .faq-container {
   margin-left: 15%;
+  margin-bottom: 50%;
 
-  margin-top: 20%;
+  /* margin-top: 20%; */
 }
 .faq-container,
 h6 {
   color: #fff;
-
+margin-bottom: 30px;
   font-family: Outfit;
   font-size: 28px;
   font-style: normal;
