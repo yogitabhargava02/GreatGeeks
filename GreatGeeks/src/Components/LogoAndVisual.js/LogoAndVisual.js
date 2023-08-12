@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Navbar from "../Home/Navbar";
 import Footer from "../Home/Footer";
 import LegendImage from "../assets/images/LegendImage.png";
@@ -8,20 +8,61 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRotate } from "@fortawesome/free-solid-svg-icons";
+import { faRotate , faChevronDown} from "@fortawesome/free-solid-svg-icons";
 
 
 
-  const LogoAndVisual = () => {
-//     const [expandedItems, setExpandedItems] = useState([]);
-  
-//     const toggleExpand = (index) => {
-//       if (expandedItems.includes(index)) {
-//         setExpandedItems(expandedItems.filter(itemIndex => itemIndex !== index));
-//       } else {
-//         setExpandedItems([...expandedItems, index]);
-//       }
-//     };
+    const LogoAndVisual = () => {
+      const [faqVisibility, setFaqVisibility] = useState({}); 
+    
+      const toggleFaqVisibility = (faqIndex) => {
+        setFaqVisibility((prevState) => ({
+          ...prevState,
+          [faqIndex]: !prevState[faqIndex]
+        }));
+      };
+
+
+
+
+      const faqs = [
+        {
+          question: "What is Copyrights Document Add on (gig extra)?",
+          answer: "The Copyrights Document Add-on (gig extra) provides you with the legal documentation necessary to protect your logo design. It includes the rights and permissions related to your logo's usage, distribution, and reproduction. This add-on is particularly important if you plan to trademark your logo or use it for commercial purposes."
+        },
+        {
+          question: "What is Social Media Kit?",
+          answer: "The Social Media Kit is a package that includes optimized versions of your logo for various social media platforms. It ensures that your logo maintains its quality and proportions across different social media profiles. The kit typically includes profile pictures, cover images, and banners tailored to platforms like Facebook, Twitter, Instagram, and LinkedIn."
+        },
+        {
+          question: "How long does it take for a revision?",
+          answer: "The duration for a revision depends on the complexity of the changes you request. Minor changes can be completed within 1-2 business days, while more intricate modifications may take longer. However, I strive to provide you with the revised logo design as quickly as possible without compromising quality."
+        },
+        {
+          question: "Do you design and develop websites?",
+          answer: "Currently, my services are focused on logo design and visual branding. I do not provide website design or development services. However, if you're looking to create a consistent visual identity for your brand, I can help you design a logo that aligns with your website's theme and aesthetics."
+        },
+        {
+          question: "I see a lot of orders in queue. Will this affect my order delivery time?",
+          answer: "The orders you see in the queue are for various design services, and each project has its own timeline and priority. I am committed to delivering your logo design within the agreed-upon timeframe. Rest assured that your order will be completed according to the schedule we've discussed."
+        },
+        {
+          question: "What is vector and source file?",
+          answer: "A vector file is a type of graphic that uses mathematical equations to define each element in the image. It can be scaled infinitely without losing quality. The source file, often provided in formats like AI or PSD, contains all the design elements, layers, and editable components used to create the logo. Having the source file allows for future modifications and scalability."
+        },
+        {
+          question: "What is a revision?",
+          answer: "A revision is a modification made to the logo design based on your feedback and preferences. It could involve changes in colors, fonts, layout, or any other design element. I offer a certain number of revisions as part of the package, and additional revisions may be available at an extra cost."
+        },
+        {
+          question: "How is the premium package beneficial?",
+          answer: "The premium package offers a comprehensive set of features and services. You'll receive multiple original logo concepts, unlimited revisions until you're satisfied, a full logo pack with various file formats, and fast delivery. This package is designed to provide you with a complete branding solution tailored to your needs."
+        }
+      ];
+
+      
+
+
   return (
     <div>
     <div style={{ background: 'linear-gradient(180deg, #177692 0%, #09080D 50.39%', minHeight: '100vh', overflowX: 'hidden' }}>
@@ -164,18 +205,22 @@ High quality work
           FAQ
         </h5>
         </div>
-        <ul style={{ listStyleType: 'none'}}>
-  <li><h6>What is Copyrights Document Add on (gig extra)?</h6>
+        <ul style={{ listStyleType: 'none' }}>
+          {faqs.map((faq, index) => (
+            <li key={index}>
+              <h6 onClick={() => toggleFaqVisibility(index)}>
+                {faq.question}
+                <FontAwesomeIcon
+                  icon={faChevronDown}
+                  className={`icon-down ${faqVisibility[index] ? 'visible' : ''}`}
+                />
+              </h6>
 
+              {faqVisibility[index] && <div className="faq-answer-container"><p className="faq-answer">{faq.answer}</p></div>}
+              <hr />
             </li>
-  <li><h6>What is Social Media Kit?</h6> </li>
-  <li><h6>How long does it take for a revision?</h6> </li>
-  <li><h6>Do you design and develop websites?</h6> </li>
-  <li><h6>I see a lot of orders in queue. Will this affect my order delivery time?</h6></li>
-  <li><h6>What is vector and source file?</h6> </li>
-  <li><h6>What is a revision?</h6> </li>
-  <li><h6>How is the premium package beneficial?</h6></li>
-</ul>
+          ))}
+        </ul>
 
       </div>
       
