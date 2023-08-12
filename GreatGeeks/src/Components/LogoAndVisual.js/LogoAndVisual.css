@@ -1,39 +1,209 @@
-.Legend{
-    height:413px;
-    width: 1044px;
+.legend-container {
+  width: 1044px;
+  height: 413px;
+  flex-shrink: 0;
+  border-radius: 18px;
+  margin-bottom: 5%;
 }
-.LegendContainer{
-    margin-top: 2%;
-    margin-bottom: 2%;
+.legend-image {
+  width: 1044px;
+  height: 413px;
+  flex-shrink: 0;
+  border-radius: 18px;
 }
-.WorldImage{
-    height: 542px;
-    width: 1012px;
+.map-container .map-image {
+  margin-top: 2%;
+  width: 1012px;
+  height: 542px;
+  text-align: center;
+  margin-left: 12%;
 }
-.parform{
-text-align: center;
-align-items: center;
-justify-content: center;
-margin-left: 400px;
+h2 {
+  color: #fff;
+  font-family: Outfit;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: lowercase;
+  text-align: center;
 }
-.form{
-    background-color: white;
-    width: 405px;
-    margin-left: 400px;
-    border-radius: 10%;
-    height: 551px;
-    justify-content: space-around;
+.world {
+  color: #0392b2;
+  font-family: Outfit;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: lowercase;
 }
+.faq-container {
+  margin-left: 15%;
 
-.Continue{
-height: 60px;
-width: 282px;
-margin-bottom: 4px;
+  margin-top: 20%;
 }
-.Contact{
-    height: 60px;
-    width: 282px;
+.faq-container,
+h6 {
+  color: #fff;
+
+  font-family: Outfit;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 42px */
+  text-transform: capitalize;
 }
-.btn{
-    justify-content: space-between;
+.faq-container,
+h5 {
+  color: #fff;
+  font-family: Outfit;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.faqline {
+  width: 80%;
+  height: 0.2px;
+  margin-right: 30%;
+  background: rgba(255, 248, 248, 0.1); /* Adjust the opacity value */
+  font-weight: 100;
+  margin-top: -4.5%;
+  margin-bottom: -20px;
+}
+.section2 {
+  margin-left: 12%;
+}
+.paraform {
+  margin-right: 12%;
+  margin-left: 12%;
+  margin-bottom: 80px;
+}
+.question {
+  color: #fff;
+  font-family: Outfit;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.ans {
+  color: #fff;
+  font-family: Outfit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%; /* 36px */
+  text-transform: lowercase;
+}
+.form-container {
+  width: 405px;
+  height: 551px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #fff;
+  padding: 10%;
+}
+.form-container .rs {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #0392b2;
+  font-family: Outfit;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.form-container .save {
+  color: #0392b2;
+  font-family: Outfit;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 150%;
+  text-transform: capitalize;
+}
+.form-container .save-container {
+  height: 23px;
+  width: 263px;
+}
+.discount {
+  color: #0392b2;
+  font-family: Outfit;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  text-transform: capitalize;
+}
+.para2-container {
+  width: 262px;
+  height: 46px;
+}
+.para2 {
+  color: #0392b2;
+  font-family: Outfit;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 150%; /* 22.5px */
+  text-transform: capitalize;
+}
+.files {
+  color: #0392b2;
+  font-family: Outfit;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  text-transform: capitalize;
+}
+.icon {
+  color: #0392b2;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+.icon-text {
+  color: #0392b2;
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 30px */
+  text-transform: capitalize;
+}
+.bullets {
+  display: flex;
+}
+.included {
+  color: #0392b2;
+  font-family: Outfit;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 22.5px */
+  text-transform: capitalize;
+}
+.btn {
+  width: 282px;
+  height: 60px;
+  flex-shrink: 0;
+
+  border-radius: 20px;
+  background: #0392b2;
+
+  color: #fff;
+  font-family: Outfit;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+  border-color: none;
+  border-style: none;
 }

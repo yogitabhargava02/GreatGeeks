@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Main from "./Components/Home/Main";
 import PressAndNews from "./Components/PressAndNews/PressAndNews";
 import ProgrammingAndTech from "./Components/Services/ProgrammingAndTech/ProgrammingAndTech";
