@@ -9,6 +9,7 @@ import Marketing from "./Components/Services/Marketing/Marketing";
 import GraphicDesign from "./Components/Services/GraphicDesign/GraphicDesign";
 import ContentWriting from "./Components/Services/ContentWriting/ContentWriting";
 import LogoAndVisual from "./Components/LogoAndVisual.js/LogoAndVisual";
+import Eblogs from "./Components/eblogs/Eblogs";
 function App() {
   return (
     <>
@@ -27,6 +28,7 @@ function App() {
           <Route path="/services/graphicDesign" element={<GraphicDesign />} />
           <Route path="/services/marketing" element={<Marketing />} />
           <Route path="LogoAndVisual" element={<LogoAndVisual />} />
+          <Route path="eblogs" element={<Eblogs />} />
         </Routes>
       </div>
     </Router>
