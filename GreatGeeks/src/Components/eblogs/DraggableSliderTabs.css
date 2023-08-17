@@ -79,6 +79,15 @@
   color: white;
   /* border-radius: 30px; */
   /* border: 1px solid #d8d5f2; */
+
+
+
+  color: #E6DEDE;
+font-family: Outfit;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 83.333% */
 }
 
 .tabs-box .tab:hover {

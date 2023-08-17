@@ -1,3 +1,5 @@
+
+
 import React, { useState } from 'react';
 import Navbar from '../Home/Navbar';
 import Footer from '../Home/Footer';
@@ -7,11 +9,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Blog from './Blogs'; // Import the Blog component
 import blogData from './blogData'; // Import your blog data
 import DraggableSliderTabs from './DraggableSliderTabs';
+
 const Eblogs = () => {
   const [selectedCategory, setSelectedCategory] = useState('For You'); // Default category
+  const categories = ['For You', 'Following', 'Space', 'Media', 'Sports', 'Music', 'Gaming', 'Language', 'Travel', 'Comedy', 'Share Market', 'Smartphones'];
+
   const filteredBlogs = blogData.filter(blog => blog.genre === selectedCategory);
-  console.log('selectedCategory:', selectedCategory);
-  console.log('filteredBlogs:', filteredBlogs);
 
   return (
     <div>
@@ -44,24 +47,21 @@ const Eblogs = () => {
 
      
         
-       
-<DraggableSliderTabs/>
-
+        <DraggableSliderTabs setSelectedCategory={setSelectedCategory} categories={categories} selectedCategory={selectedCategory} />
 
 <div className='blog-container'>
-
-{filteredBlogs.map((blog, index) => (
-            <Blog
-              key={index}
-              title={blog.title}
-              description={blog.description}
-              date={blog.date}
-              time={blog.time}
-              genre={blog.genre}
-              image={blog.image}
-            />
-          ))}
-          </div>
+  {filteredBlogs.map((blog, index) => (
+    <Blog
+      key={index}
+      title={blog.title}
+      description={blog.description}
+      date={blog.date}
+      time={blog.time}
+      genre={blog.genre}
+      image={blog.image}
+    />
+  ))}
+</div>
 
         <Footer />
       </div>
