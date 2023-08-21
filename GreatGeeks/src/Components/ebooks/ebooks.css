@@ -1,0 +1,45 @@
+.ebooks-container{
+    margin-left: 80px;
+}
+.types{
+    display: flex;
+display: flexbox;
+margin-bottom: 20px;
+}
+.type{
+  
+    margin-right: 10px;
+    padding: 10px;
+       border-radius: 20px;
+    background: #FFF;
+   color: black;
+   /* width: 168px;
+height: 35px; */
+flex-shrink: 0;
+font-size: 20px;
+font-weight: 500;
+}
+h2{
+    color: #FFF;
+text-align: left;
+font-family: Outfit;
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: 100px; /* 277.778% */
+text-transform: capitalize;
+}
+.book-list{
+    display: flex;
+    margin-right: 20px;
+
+}
+.books-image{
+    height: 450px;
+    width: 400px;
+    border-radius: 10px;
+}
+.book-item{
+    margin-right: 30px;
+    color: white;
+}
