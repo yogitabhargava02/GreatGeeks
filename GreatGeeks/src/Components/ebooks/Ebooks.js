@@ -39,22 +39,31 @@ const Ebooks = () => {
             >
                   <img className="books-image" src={book.image} alt={book.title} />
                   <h3>{book.title}</h3>
-                  <p>${book.price}</p>
+                  {/* <p>${book.price}</p> */}
                 </Link>
               ))}
             </div>
-            {/* {selectedBook && (
-              <div className="book-details">
-                <h3>{selectedBook.title}</h3>
-                <p>Author: {selectedBook.author}</p>
-                <p>Published Date: {selectedBook.published_date}</p>
-                <p>Description: {selectedBook.description}</p>
-                <p>Pages: {selectedBook.pages}</p>
-                <p>Rating: {selectedBook.rating}</p>
-                <p>Author: {selectedBook.author_name}</p>
-                <p>About the Author: {selectedBook.about_the_author}</p>
-              </div> */}
-            {/* )} */}
+           
+          </div>
+          <div className='ebooks-one'>
+            <h2>Stories to save the world</h2>
+            <div className="book-list">
+              {dummyEbooks.map((book) => (
+                <Link
+              key={book.id}
+              to={{
+                pathname: `/ebook/${book.id}`,
+                state: { selectedBook: book }
+              }}
+              className="book-item"
+            >
+                  <img className="books-image" src={book.image} alt={book.title} />
+                  <h3>{book.title}</h3>
+                  {/* <p>${book.price}</p> */}
+                </Link>
+              ))}
+            </div>
+           
           </div>
         </div>
         <Footer />

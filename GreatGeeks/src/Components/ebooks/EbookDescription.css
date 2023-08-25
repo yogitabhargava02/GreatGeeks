@@ -1,176 +1,236 @@
-/* EbookDescription.css */
+
 .ebook-description-container {
-    background: linear-gradient(to bottom, #177692, #09080D);
-    min-height: 100vh;
-    overflow-x: hidden;
+  background: linear-gradient(to bottom, #177692, #09080d);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+}
+.section-one {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 
+.left-content {
+  display: block;
+  align-items: flex-start;
+}
 
-  }
-  .main{
-    display: flex;
-    flex-direction:row;
-    
-  }
-  .section-one {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  
-  }
-  
-  .left-content {
-    display: block;
-    align-items: flex-start;
-   
-   
-  }
-  
-  .ebook-title
-   {
-    color: #FFF;
-    font-family: Outfit;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-   
-    text-transform: capitalize;
-  }
-  .ebook-author,
-  .ebook-published-date{
-    color: #FFF;
-    opacity: 1;
-    font-family: Outfit;
-    font-size: 20px;
-    font-style: normal;
-   /* opacity: -0.1; */
-    /* line-height: 50px; */
-    text-transform: capitalize;
-  }
-  .ebook-rating {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-shrink: 0;
-    color: #F7F0F0;
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0.1px;
-  }
-  
-  
-    .divider {
-        width: 1px;
-        height: 28px;
-        background-color: white;
-        margin-left: 30px;
-        margin-right: 30px;
-        justify-content: center;
-      }
-    
-  
-  
-  .books-image {
-    max-width: 240px;
-    height:300px;
-  }
-  
-  .ebook-details {
-    color: #FFF;
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-  }
-  .section-two{
-    display: flex;
-  }
-  .right{
-    display: block;
-  }
-  .btn{
-    border-radius: 21px;
-    transition: background-color 0.3s;
-    background: #FFF;
-    width: 205px;
-    height: 48px;
-    flex-shrink: 0;
-    color: #16708B;
-    font-family: Roboto;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px; /* 133.333% */
-    letter-spacing: 0.1px;
-    margin-right: 12px;
-  }
-  .ebook-content{
-    margin-left: 60px;
-    margin-left: 60px;
-    padding: 30px;
-    margin-top: 120px;
-  }
-  .aboutus-content{
-    color: #FFF;
-    font-family: Roboto;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px; /* 142.857% */
-    letter-spacing: 0.2px;
-  }
- 
-  .heading{
-    color: #FFF;
-font-family: Outfit;
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: 50px; /* 208.333% */
-text-transform: capitalize;
-margin-top: 30px;
-margin-bottom: 10px;
-  }
-  .paragraph{
-    color: #F7F0F0;
+.ebook-title {
+  color: #fff;
+  font-family: Outfit;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+
+  text-transform: capitalize;
+}
+.ebook-author,
+.ebook-published-date {
+  color: #fff;
+  opacity: 1;
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  /* opacity: -0.1; */
+  /* line-height: 50px; */
+  text-transform: capitalize;
+}
+.ebook-rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #f7f0f0;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+
+.divider {
+  width: 1px;
+  height: 28px;
+  background-color: white;
+  margin-left: 30px;
+  margin-right: 30px;
+  justify-content: center;
+}
+
+.books-image {
+  max-width: 240px;
+  height: 300px;
+}
+
+.ebook-details {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+.section-two {
+  display: flex;
+}
+.right {
+  display: block;
+}
+.btn {
+  border-radius: 21px;
+  transition: background-color 0.3s;
+  background: #fff;
+  width: 205px;
+  height: 48px;
+  flex-shrink: 0;
+  color: #16708b;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 133.333% */
+  letter-spacing: 0.1px;
+  margin-right: 12px;
+}
+.ebook-content {
+  margin-left: 60px;
+  margin-left: 60px;
+  padding: 30px;
+  margin-top: 120px;
+}
+.aboutus-content {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.2px;
+}
+
+.heading {
+  color: #fff;
+  font-family: Outfit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 50px; /* 208.333% */
+  text-transform: capitalize;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.paragraph {
+  color: #f7f0f0;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.2px;
+}
+
+.rate-this-book-content {
+  display: flex;
+}
+
+.btn:hover {
+  background-color: black; /* Change background color on hover */
+  color: white; /* Change text color on hover */
+}
+.stars {
+  color: white;
+  display: flex;
+  /* width: px;  */
+  justify-content: space-between;
+}
+
+/* Apply margin to each star icon */
+.star-icon {
+  margin-right: 5px;
+  /* color: blue; */
+  /* width: 3%; */
+
+  height: 35px; /* Adjust the margin as needed */
+}
+.write-review {
+  margin-left: 90px; /* Automatically adjust the left margin to center-align */
+}
+.review {
+  align-items: left;
+}
+.review-container {
+}
+
+.review-container {
+  display: flex;
+}
+
+.review-left {
+  flex: 1; /* Occupy most of the space on the left */
+  padding-right: 20px; /* Add some space between the columns */
+}
+
+.review-right {
+  flex: 1; /* Occupy most of the space on the right */
+  padding-left: 20px; /* Add some space between the columns */
+}
+
+.review-right h2 {
+  color: #fff;
+  font-family: Outfit;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.me {
+  border-color: yellow;
+}
+.similar-container {
+  justify-content: space-between;
+}
+.similar-ebook {
+  display: flex;
+}
+.similar-right {
+  display: block;
+}
+.similar-title {
+  font-size: 23px;
+  align-items: center;
+  font-weight: 200;
+}
+.progress {
+  margin-bottom: 9px;
+}
+.rating-review-1 {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.rating-left {
+  padding: 20px;
+  display: block;
+}
+
+.rating-left h1 {
+  color: #FFF;
 font-family: Roboto;
-font-size: 14px;
+font-size: 56px;
 font-style: normal;
 font-weight: 400;
-line-height: 20px; /* 142.857% */
-letter-spacing: 0.2px;
-  }
+line-height: 64px; 
+  margin: 0;
+}
 
+.progress-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  .rate-this-book-content{
-    display: flex;
-    /* justify-content: space-between; */
-    gap: 20;
-  }
- 
-  
-  .btn:hover {
-    background-color: black; /* Change background color on hover */
-    color: white; /* Change text color on hover */
-  }
-  
-  /* ... remaining styles ... */
-  
