@@ -7,8 +7,8 @@ import Logo from "../assets/images/Logo.png";
 const Footer= () => {
   const containerStyle = {
     display: 'grid',
-    gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr', // Five equal columns
-    gridGap: '0', // Gap between the columns
+    gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr',
+    gridGap: '0', 
     // height: '420px',
     flexShrink: '0',
     background: '#15233E',
@@ -20,6 +20,7 @@ const Footer= () => {
   };
 
   const columnStyle = {
+    margin:30,
     display: 'flex',
     flexDirection: 'column',
   };
@@ -62,13 +63,22 @@ const Footer= () => {
     margin: '5px',
     color: 'white',
   };
-
+  const equalHeightContainer = {
+    display: 'flex',
+  };
   return (
     <div>
       <img src={FooterAbove} alt="about" width='100%' margin='0'/>
       <div style={containerStyle}>
+
+
+
+
+      <div style={equalHeightContainer}>
+        
+      </div>
         <div style={columnStyle}>
-          <h2 style={headingStyle}>Categories</h2>
+          <h1 style={headingStyle}>Categories</h1>
           <ul style={listStyle}>
             <li style={listItemStyle}>Programming & Tech</li>
             <li style={listItemStyle}>Graphic & Design</li>
@@ -80,7 +90,7 @@ const Footer= () => {
 
         {/* Second Column */}
         <div style={columnStyle}>
-          <h2 style={headingStyle}>About</h2>
+          <h1 style={headingStyle}>About</h1>
           <ul style={listStyle}>
             <li style={listItemStyle}>Career</li>
             <li style={listItemStyle}>Press & News</li>
@@ -92,7 +102,7 @@ const Footer= () => {
 
         {/* Third Column */}
         <div style={columnStyle}>
-          <h2 style={headingStyle}>Support</h2>
+          <h1 style={headingStyle}>Support</h1>
           <ul style={listStyle}>
             <li style={listItemStyle}>Help & Support</li>
             <li style={listItemStyle}>Trust & Safety</li>
@@ -104,7 +114,7 @@ const Footer= () => {
 
         {/* Fourth Column */}
         <div style={columnStyle}>
-          <h2 style={headingStyle}>Community</h2>
+          <h1 style={headingStyle}>Community</h1>
           <ul style={listStyle}>
             <li style={listItemStyle}>Customer Success Stories</li>
             <li style={listItemStyle}>Community Hub</li>
@@ -119,18 +129,16 @@ const Footer= () => {
           </ul>
         </div>
 
-        <div style={columnStyle}>
-          <h2 style={headingStyle}>More</h2>
+        {/* <div style={columnStyle}>
+          <h1 style={headingStyle}>More</h1>
           <ul style={listStyle}>
             <li style={listItemStyle}>Enterprise</li>
             <li style={listItemStyle}>Business</li>
             <li style={listItemStyle}>Inspired</li>
             <li style={listItemStyle}>Logo Maker</li>
-            <li style={listItemStyle}>Learn</li>
-            <li style={listItemStyle}>Wrking</li>
-            <li style={listItemStyle}>Clear Voice</li>
+            
           </ul>
-        </div>
+        </div> */}
      
         {/* Logo */}
         <img src={Logo} alt="Logo" style={logoStyle} />
@@ -142,6 +150,12 @@ const Footer= () => {
           <FontAwesomeIcon icon={faLinkedin} style={socialIconStyle} />
           <FontAwesomeIcon icon={faInstagram} style={socialIconStyle} />
         </div>
+
+
+
+
+
+        
       </div>
     </div>
   );

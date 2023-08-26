@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { faAngleRight  } from '@fortawesome/free-solid-svg-icons';
+import { faStar, faBookmark, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./EbookDescription.css";
@@ -72,7 +71,16 @@ const EbookDescription = () => {
               src={selectedBook.image}
               alt={selectedBook.title}
             />
-            <p>Add to Wishlist</p>
+<div className="add">
+<p>  <FontAwesomeIcon
+              icon={faBookmark} // Use faBookmark for the save icon
+              className="bookmark-icon"
+         /> Add to Wishlist</p>
+            
+           
+</div>
+           
+          
           </div>
         </div>
         <div className="aboutus-container">
@@ -82,105 +90,145 @@ const EbookDescription = () => {
         <button className="btn">{selectedBook.type}</button>
 
         <div className="ratings-reviews">
-
-
-
-    
-
-
-
-
-
           <h3 className="heading">Ratings & Reviews</h3>
 
+          <div className="rating-review-1">
+            <div className="rating-left">
+              <h1 className="heading">4.4</h1>
+              <div className="review-stars">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <FontAwesomeIcon
+                    key={star}
+                    icon={
+                      star <= Math.round(selectedBook.averageRating)
+                        ? faStar
+                        : faStar
+                    }
+                    className="star-icon"
+                  />
+                ))}
+              </div>
+              <p>{selectedBook.totalReviews} reviews</p>
+            </div>
 
-<div className="rating-review-1">
-  <div className="rating-left">
-    <h1 className="heading">4.4</h1>
-    <div className="review-stars">
-      {[1, 2, 3, 4, 5].map((star) => (
-        <FontAwesomeIcon
-          key={star}
-          icon={star <= Math.round(selectedBook.averageRating) ? faStar : faStar}
-          className="star-icon"
-        />
-      ))}
-    </div>
-    <p>{selectedBook.totalReviews} reviews</p>
-  </div>
-
-
-
-
-          <div className="progress-right">
-      <div className="progress">
-        <div className="progress-bar" role="progressbar" style={{ width: '75%' }}aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
-      <div className="progress">
-        <div className="progress-bar" role="progressbar" style={{ width: '2%' }} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
-      <div className="progress">
-        <div className="progress-bar" role="progressbar" style={{ width: '20%' }} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
-      <div className="progress">
-        <div className="progress-bar" role="progressbar" style={{ width: '15%' }} aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
-      <div className="progress">
-        <div className="progress-bar" role="progressbar" style={{ width: '40%' }} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
-    </div>
- 
-
-
-
-</div>
-
+            <div className="progress-right">
+            
+              <div className="progress">
+              
+                <div
+                  className="progress-bar"
+                  role="progressbar"
+                  style={{ width: "75%" }}
+                  aria-valuenow="0"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+              <div className="progress">
+                <div
+                  className="progress-bar"
+                  role="progressbar"
+                  style={{ width: "2%" }}
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+              <div className="progress">
+                <div
+                  className="progress-bar"
+                  role="progressbar"
+                  style={{ width: "20%" }}
+                  aria-valuenow="50"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+              <div className="progress">
+                <div
+                  className="progress-bar"
+                  role="progressbar"
+                  style={{ width: "15%" }}
+                  aria-valuenow="75"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+              <div className="progress">
+                <div
+                  className="progress-bar"
+                  role="progressbar"
+                  style={{ width: "40%" }}
+                  aria-valuenow="100"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+          </div>
 
           <div className="review-container">
 
 
-         
-            <div className="review-left">
-              {dummyReviews.map((review, index) => (
-                <div className="review" key={index}>
-                  <div className="review-header">
-                    <p className="review-username">{review.username}</p>
-                    <div className="review-stars">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <FontAwesomeIcon
-                          key={star}
-                          icon={star <= review.rating ? faStar : faStar}
-                          className="star-icon"
-                        />
-                      ))}
-                    </div>
-                    <p className="review-date">{review.date}</p>
-                  </div>
-                  <p className="review-description">{review.description}</p>
-                </div>
-              ))}
-            </div>
-            <div className="review-right">
-              <h2>Similar Ebooks  <FontAwesomeIcon icon={faAngleRight } className='right-arrow-icon' /></h2>
-              <div className="similar-container">
-                <div className="similar-ebooks">
-                  {dummySimilarEbooks.map((similarEbook) => (
-                    <div key={similarEbook.id} className="similar-ebook">
-                      <div className="similar-left">
-                        <img
-                          src={similarEbook.image}
-                          alt={similarEbook.title}
-                        />
-                      </div>
-                      <div className="similar-right">
-                        <p className="similar-title">{similarEbook.title}</p>
-                        <p className="similar-price">Rs. {similarEbook.price}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+          <div className="review-left">
+  {dummyReviews.map((review, index) => (
+    <div key={index} className="review-entry">
+      <div className="review-header">
+        <h6 className="username">{review.username}</h6>
+       
+      </div>
+      <div className="user-rating">
+        {[1, 2, 3, 4, 5].map((star) => (
+          <FontAwesomeIcon
+            key={star}
+            icon={star <= review.rating ? faStar : faStar}
+            className="user-stars"
+          />
+        ))}
+      
+      </div>
+      <h6 className="userdate">{review.date}</h6>
+      <p className="review-description">{review.description}</p>
+    </div>
+  ))}
+</div>
+
+
+
+
+
+
+
+          
+<div className="review-right">
+  <h2 className="similar-ebooks-heading">
+    Similar Ebooks{" "}
+    <FontAwesomeIcon
+      icon={faAngleRight}
+      className="right-arrow-icon"
+    />
+  </h2>
+  <div className="similar-container">
+    <div className="similar-ebooks">
+      {dummySimilarEbooks.map((similarEbook) => (
+        <div key={similarEbook.id} className="similar-ebook">
+          <div className="similar-left">
+            <img
+              src={similarEbook.image}
+              alt={similarEbook.title}
+              className="similar-image"
+            />
+          </div>
+          <div className="similar-right">
+            <p className="similar-title">{similarEbook.title}</p>
+            <p className="similar-price">Rs. {similarEbook.price}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
           </div>
         </div>
 
